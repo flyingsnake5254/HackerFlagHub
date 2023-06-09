@@ -29,8 +29,26 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'LoginController::index');
+$routes->post('login', 'LoginController::login');
+$routes->post('createAccount', 'LoginController::createAccount');
+$routes->get('home', 'HomeController::index');
+$routes->get('learn', 'LearnController::index');
+$routes->get('problems', 'ProblemsController::index');
+$routes->get('scoreboard', 'ScoreboardController::index');
 
+// problems web 
+$routes->get('problems/web/p1', 'ProblemsController::p1');
+$routes->get('problems/web/p1/robots.txt', 'ProblemsController::robots');
+$routes->get('problems/web/p1/saskme', 'ProblemsController::ans_page');
+$routes->post('problems/checkAns', 'ProblemsController::checkAnswer');
+
+$routes->get('problems/ter/p1', 'ProblemsController::p2');
+
+
+$routes->post('scoreboard/getScore', 'ScoreboardController::getScore');
+
+$routes->get('test', 'TestController::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
