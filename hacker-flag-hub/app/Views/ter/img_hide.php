@@ -36,6 +36,15 @@
                     term.write('\r\n');
                     var command = userInput;
                     userInput = ""; 
+                    /*
+                    \n :
+                    Hacker Flag Hub$
+                                    Hacker Flag Hub$
+
+                    \r\n :
+                    Hacker Flag Hub$
+                    Hacker Flag Hub$
+                    */
 
                     // 如果用户输入的命令为 "ls"，则输出 "image.png"
                     if (command === "ls") {
@@ -62,7 +71,7 @@
                     term.write('Hacker Flag Hub \x1B[1;3;31musers\x1B[0m $ ');
                 } 
                 // backspace
-                else if (data.charCodeAt(0) === 127 || data.charCodeAt(0) === 8) {
+                else if (data.charCodeAt(0) === 8) {
                     userInput = userInput.slice(0, -1);
                     term.write('\b \b');
                 } else {

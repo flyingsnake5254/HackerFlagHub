@@ -1,0 +1,23 @@
+pipeline {
+    agent {
+    	node {
+    		label 'agent'
+    	}
+    }
+
+    stages {
+    
+        
+
+        stage('SonarQube analysis') {
+            steps {
+                script {
+                    withSonarQubeEnv('local_sonarqube') {
+              
+                        sh '/opt/sonar-scanner/bin/sonar-scanner'
+                    }
+                }
+            }
+        }
+    }
+}
