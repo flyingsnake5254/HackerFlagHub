@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +24,7 @@
             <div class="container-fluid">
 
               <!-- logo -->
-              <a class="navbar-brand" href="#"><img width='50px' height='50px' src="<?= base_url('images/logo.png'); ?>"><span id="logo-text" class="align-baseline">Hacker Flag Hub</span></a>
+              <a class="navbar-brand" href="#"><img alt="logo" width='50px' height='50px' src="<?= base_url('images/logo.png'); ?>" alt="Hacker Flag Hub Logo"><span id="logo-text" class="align-baseline">Hacker Flag Hub</span></a>
 
               <!-- menu icon -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -139,7 +139,7 @@
           <!-- challenges -->
           <div class="row">
             <div class="col" style="margin: 100px;  display: flex; justify-content: center;">
-              <img src="<?= base_url('images/home_learn_skill/challenges.png'); ?>" />
+              <img alt="Challenge Logo" src="<?= base_url('images/home_learn_skill/challenges.png'); ?>" />
             </div>
           </div>
 
@@ -242,12 +242,12 @@
           <!-- learning  -->
           <div class="row">
             <div class="col" style="margin-top: 100px;  display: flex; justify-content: center;">
-              <img src="<?= base_url('images/home_learn_skill/learning_skills.png'); ?>" />
+              <img alt="learning skill logo" src="<?= base_url('images/home_learn_skill/learning_skills.png'); ?>" />
             </div>
           </div>
           <div class="row">
             <div class="col" style="margin: 30px;  display: flex; justify-content: center;">
-              <img src="<?= base_url('images/home_learn_skill/basic_pl.png'); ?>" />
+              <img alt="basic pl logo" src="<?= base_url('images/home_learn_skill/basic_pl.png'); ?>" />
             </div>
           </div>
           
@@ -307,7 +307,7 @@
 
           <div class="row">
             <div class="col" style="margin-top: 200px;  display: flex; justify-content: center;">
-              <img src="hacker-flag-hub/writable/uploads/home_learn_skill/pskill.png" />
+              <img alt="learning pskill logo" src="hacker-flag-hub/writable/uploads/home_learn_skill/pskill.png" />
             </div>
           </div>
 
@@ -359,9 +359,9 @@
 
           <div class="row">
             <div class="col" style=" height: 60px; display: flex; justify-content: end; width : 60px;">
-              <a href="#"><img src="<?= base_url('images/home_learn_skill/ig.png'); ?>" width="50px" height="50px" style="margin-left: 10px;"></a>
-              <a href="#"><img src="<?= base_url('images/home_learn_skill/facebook.png'); ?>" width="50px" height="50px" style="margin-left: 10px;"></a>
-              <a href="#"><img src="<?= base_url('images/home_learn_skill/mail.png'); ?>" width="50px" height="50px" style="margin-left: 10px;"></a>
+              <a href="#"><img alt="ig logo" src="<?= base_url('images/home_learn_skill/ig.png'); ?>" width="50px" height="50px" style="margin-left: 10px;"></a>
+              <a href="#"><img alt="fb logo" src="<?= base_url('images/home_learn_skill/facebook.png'); ?>" width="50px" height="50px" style="margin-left: 10px;"></a>
+              <a href="#"><img alt="mail logo" src="<?= base_url('images/home_learn_skill/mail.png'); ?>" width="50px" height="50px" style="margin-left: 10px;"></a>
             </div>
             
             
