@@ -37,7 +37,7 @@
 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url('js/bootstrap.js'); ?>"></script>
 
 </head>
 <body>      
@@ -201,7 +201,7 @@
     
     <!-- Dynamic BG  -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="<?= base_url('js/three.js'); ?>"></script>
     <script src="<?= base_url('js/vanta_dot.js'); ?>"></script>
     <script>
         VANTA.DOTS({
