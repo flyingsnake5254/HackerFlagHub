@@ -14,12 +14,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col" style="display:flex; justify-content:center; margin-top:50px;">
-                    <p style="font-size:50px; color:red;">/saskme</p>
-                </div>
-            </div>
-        </div>
+<pre>
+User-agent: *
+Disallow: /saskme.html
+</pre>
     </body>
 </html>

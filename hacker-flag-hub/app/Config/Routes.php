@@ -40,7 +40,7 @@ $routes->get('scoreboard', 'ScoreboardController::index');
 // problems web 
 $routes->get('problems/web/p1', 'ProblemsController::p1');
 $routes->get('problems/web/p1/robots.txt', 'ProblemsController::robots');
-$routes->get('problems/web/p1/saskme', 'ProblemsController::ans_page');
+$routes->get('problems/web/p1/saskme.html', 'ProblemsController::ans_page');
 $routes->post('problems/checkAns', 'ProblemsController::checkAnswer');
 
 $routes->get('problems/ter/p1', 'ProblemsController::p2');

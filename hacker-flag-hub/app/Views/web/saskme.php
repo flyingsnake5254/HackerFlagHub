@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row">
                 <div class="col" style="display:flex; justify-content:center; margin-top:50px;">
-                    <p style="font-size:50px; color:red;">/flag{1lkUCdC0si5V1gqSFVEMdRD2CxYJPw}</p>
+                    <p style="font-size:50px; color:red;">flag{1lkUCdC0si5V1gqSFVEMdRD2CxYJPw}</p>
                 </div>
             </div>
         </div>
