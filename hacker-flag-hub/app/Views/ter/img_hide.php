@@ -71,7 +71,7 @@
                     term.write('Hacker Flag Hub \x1B[1;3;31musers\x1B[0m $ ');
                 } 
                 // backspace
-                else if (data.charCodeAt(0) === 8) {
+                else if (data.charCodeAt(0) === 127 ||data.charCodeAt(0) === 8) {
                     userInput = userInput.slice(0, -1);
                     term.write('\b \b');
                 } else {
