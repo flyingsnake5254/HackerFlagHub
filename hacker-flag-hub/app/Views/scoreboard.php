@@ -63,7 +63,7 @@
                 </ul>
                 
               </div>
-              <button class="btn btn-outline-primary navbar-tab-text " type="button" style="margin: 3px; justify-content: end;" onclick="logout()">Logout</button>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#logout_modal">Logout</button>
               <script>
                 function logout(){
                   window.location.href = "/";
@@ -75,7 +75,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="column">
+                <div class="col"  style="display:flex; justify-content:center;">
                     <div id="score_history" style="width: 1000px; height:600px; margin-top: 100px; "></div>
                 </div>
             </div>
@@ -224,6 +224,26 @@
             
 
         </script>
+
+        <!-- Modal -->
+        <div class="modal fade" id="logout_modal" tabindex="-1" aria-labelledby="logout_title" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="logout_title">Logout</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                Are you sure, do you want to logout?
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+                <button type="button" class="btn btn-primary"  onclick="logout()">yes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- === -->
 
         
         

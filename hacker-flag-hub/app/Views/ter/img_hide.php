@@ -23,7 +23,16 @@
     </head>
     <body class="bg-style">
         <div id="vanta_bg"></div>
-        
+        <div class="container" style="margin-top:50px; ">
+            <div class="row">
+                <div class="col" style="display:flex; justify-content:center;">
+                    <p>Terminal : </p>
+                </div>
+            </div>
+            <div class="row">
+                <div id="terminal"></div>
+            </div>
+        </div>
         <div id="terminal"></div>
         <script>
             var term = new Terminal();

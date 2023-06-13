@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,12 +16,13 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </head>
     <body>
+      <div id="vanta_bg"></div>
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid">
 
               <!-- logo -->
-              <a class="navbar-brand" href="#"><img alt="logo" width='50px' height='50px' src="<?= base_url('images/logo.png'); ?>"><span id="logo-text" class="align-baseline">Hacker Flag Hub</span></a>
+              <a class="navbar-brand" href="#"><img width='50px' height='50px' src="<?= base_url('images/logo.png'); ?>"><span id="logo-text" class="align-baseline">Hacker Flag Hub</span></a>
 
               <!-- menu icon -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +58,9 @@
                 </ul>
                 
               </div>
-              <button class="btn btn-outline-primary navbar-tab-text " type="button" style="margin: 3px; justify-content: end;" onclick="logout()">Logout</button>
+              <!-- <button class="btn btn-outline-primary navbar-tab-text " type="button" style="margin: 3px; justify-content: end;" onclick="logout()">Logout</button> -->
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#logout_modal">Logout</button>
+              
               <script>
                 function logout(){
                   window.location.href = "/";
@@ -120,7 +123,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
-                        CFiles can always be changed in a secret way. Can you find the flag? <a href="<?= base_url('/problems/ter/p1'); ?>">link</a><br>
+                        Files can always be changed in a secret way. Can you find the flag? <a href="<?= base_url('/problems/ter/p1'); ?>">link</a><br>
                         (hint : zsteg)
                       </div>
                       <div class="modal-footer">
@@ -537,8 +540,47 @@
             
             }
         </script>
+        <!-- Modal -->
+        <div class="modal fade" id="logout_modal" tabindex="-1" aria-labelledby="logout_title" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="logout_title">Logout</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Are you sure, do you want to logout?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+                        <button type="button" class="btn btn-primary"  onclick="logout()">yes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- === -->
         
         <script src="/static/gs_problems/show_problems.js"></script>
+        <!-- Dynamic BG  -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+        <script>
+            VANTA.DOTS({
+                el: "#vanta_bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x7fff,
+                color2: 0xffffff,
+                backgroundColor: 0xffffff,
+                spacing: 23.00
+            })
+        </script>
         
     </body>
 </html>

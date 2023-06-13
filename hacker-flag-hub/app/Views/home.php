@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,14 +17,14 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </head>
-    <body class="bg-style">
+    <body >
         <div id="vanta_bg"></div>
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid">
 
               <!-- logo -->
-              <a class="navbar-brand" href="#"><img alt="logo" width='50px' height='50px' src="<?= base_url('images/logo.png'); ?>" alt="Hacker Flag Hub Logo"><span id="logo-text" class="align-baseline">Hacker Flag Hub</span></a>
+              <a class="navbar-brand" href="#"><img width='50px' height='50px' src="<?= base_url('images/logo.png'); ?>"><span id="logo-text" class="align-baseline">Hacker Flag Hub</span></a>
 
               <!-- menu icon -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +59,9 @@
                 </ul>
                 
               </div>
-              <button class="btn btn-outline-primary navbar-tab-text " type="button" style="margin: 3px; justify-content: end;" onclick="logout()">Logout</button>
+              <!-- <button class="btn btn-outline-primary navbar-tab-text " type="button" style="margin: 3px; justify-content: end;" onclick="logout()">Logout</button> -->
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#logout_modal">Logout</button>
+              
               <script>
                 function logout(){
                   window.location.href = "/";
@@ -139,7 +141,7 @@
           <!-- challenges -->
           <div class="row">
             <div class="col" style="margin: 100px;  display: flex; justify-content: center;">
-              <img alt="Challenge Logo" src="<?= base_url('images/home_learn_skill/challenges.png'); ?>" />
+              <img src="<?= base_url('images/home_learn_skill/challenges.png'); ?>" />
             </div>
           </div>
 
@@ -242,12 +244,12 @@
           <!-- learning  -->
           <div class="row">
             <div class="col" style="margin-top: 100px;  display: flex; justify-content: center;">
-              <img alt="learning skill logo" src="<?= base_url('images/home_learn_skill/learning_skills.png'); ?>" />
+              <img src="<?= base_url('images/home_learn_skill/learning_skills.png'); ?>" />
             </div>
           </div>
           <div class="row">
             <div class="col" style="margin: 30px;  display: flex; justify-content: center;">
-              <img alt="basic pl logo" src="<?= base_url('images/home_learn_skill/basic_pl.png'); ?>" />
+              <img src="<?= base_url('images/home_learn_skill/basic_pl.png'); ?>" />
             </div>
           </div>
           
@@ -307,7 +309,7 @@
 
           <div class="row">
             <div class="col" style="margin-top: 200px;  display: flex; justify-content: center;">
-              <img alt="learning pskill logo" src="hacker-flag-hub/writable/uploads/home_learn_skill/pskill.png" />
+              <img src="<?= base_url('images/home_learn_skill/pskill.png'); ?>" />
             </div>
           </div>
 
@@ -359,20 +361,40 @@
 
           <div class="row">
             <div class="col" style=" height: 60px; display: flex; justify-content: end; width : 60px;">
-              <a href="#"><img alt="ig logo" src="<?= base_url('images/home_learn_skill/ig.png'); ?>" width="50px" height="50px" style="margin-left: 10px;"></a>
-              <a href="#"><img alt="fb logo" src="<?= base_url('images/home_learn_skill/facebook.png'); ?>" width="50px" height="50px" style="margin-left: 10px;"></a>
-              <a href="#"><img alt="mail logo" src="<?= base_url('images/home_learn_skill/mail.png'); ?>" width="50px" height="50px" style="margin-left: 10px;"></a>
+              <a href="#"><img src="<?= base_url('images/home_learn_skill/ig.png'); ?>" width="50px" height="50px" style="margin-left: 10px;"></a>
+              <a href="#"><img src="<?= base_url('images/home_learn_skill/facebook.png'); ?>" width="50px" height="50px" style="margin-left: 10px;"></a>
+              <a href="#"><img src="<?= base_url('images/home_learn_skill/mail.png'); ?>" width="50px" height="50px" style="margin-left: 10px;"></a>
             </div>
             
             
           </div>
           <a href="#"></a>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="logout_modal" tabindex="-1" aria-labelledby="logout_title" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="logout_title">Logout</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Are you sure, do you want to logout?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+                        <button type="button" class="btn btn-primary"  onclick="logout()">yes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- === -->
         
         <!-- Dynamic BG  -->
 
-        <script src="<?= base_url('js/three.js'); ?>"></script>
-        <script src="<?= base_url('js/vanta_dot.js'); ?>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
         <script>
             VANTA.DOTS({
                 el: "#vanta_bg",
