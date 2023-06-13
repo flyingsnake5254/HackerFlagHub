@@ -15,11 +15,10 @@
         
         <!-- Bootstrap CDN -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <script src="<?= base_url('js/bootstrap.js'); ?>" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        
         <!-- echart  -->
-        <!-- Echart  -->
-    <script src="<?= base_url('js/echart.js'); ?>"></script>
+        <script src="<?= base_url('js/echart.js'); ?>"></script>
     </head>
     <body class="bg-style">
         <div id="vanta_bg"></div>
@@ -63,25 +62,24 @@
                 </ul>
                 
               </div>
-              <button class="btn btn-outline-primary navbar-tab-text " type="button" style="margin: 3px; justify-content: end;" onclick="logout()">Logout</button>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#logout_modal">Logout</button>
               <script>
                 function logout(){
                   window.location.href = "/";
                 }
               </script>
+              
 
             </div>
         </nav>
 
         <div class="container">
             <div class="row">
-                <div class="column">
+                <div class="col"  style="display:flex; justify-content:center;">
                     <div id="score_history" style="width: 1000px; height:600px; margin-top: 100px; "></div>
                 </div>
             </div>
-            <div class="row">
-                
-            </div>
+            
         </div>
 
         <script>
@@ -224,6 +222,26 @@
             
 
         </script>
+
+        <!-- Modal -->
+        <div class="modal fade" id="logout_modal" tabindex="-1" aria-labelledby="logout_title" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="logout_title">Logout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    Are you sure, do you want to logout?
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+                    <button type="button" class="btn btn-primary"  onclick="logout()">yes</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- === -->
 
         
         
