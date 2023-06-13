@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,7 @@
         
         <!-- Bootstrap CDN -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="<?= base_url('js/bootstrap.js'); ?>" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
         <!-- xterm.js  -->
         <script src="<?= base_url('xterm.js'); ?>"></script>
@@ -23,7 +23,16 @@
     </head>
     <body class="bg-style">
         <div id="vanta_bg"></div>
-        
+        <div class="container" style="margin-top:50px; ">
+            <div class="row">
+                <div class="col" style="display:flex; justify-content:center;">
+                    <p>Terminal : </p>
+                </div>
+            </div>
+            <div class="row">
+                <div id="terminal"></div>
+            </div>
+        </div>
         <div id="terminal"></div>
         <script>
             var term = new Terminal();
@@ -71,7 +80,7 @@
                     term.write('Hacker Flag Hub \x1B[1;3;31musers\x1B[0m $ ');
                 } 
                 // backspace
-                else if (data.charCodeAt(0) === 8) {
+                else if (data.charCodeAt(0) === 127 ||data.charCodeAt(0) === 8) {
                     userInput = userInput.slice(0, -1);
                     term.write('\b \b');
                 } else {
@@ -90,8 +99,8 @@
         
         <!-- Dynamic BG  -->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+        <script src="<?= base_url('js/three.js'); ?>"></script>
+        <script src="<?= base_url('js/vanta_dot.js'); ?>"></script>
         <script>
             VANTA.DOTS({
                 el: "#vanta_bg",

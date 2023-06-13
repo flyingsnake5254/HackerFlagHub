@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </head>
-    <body class="bg-style">
+    <body >
         <div id="vanta_bg"></div>
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -59,7 +59,9 @@
                 </ul>
                 
               </div>
-              <button class="btn btn-outline-primary navbar-tab-text " type="button" style="margin: 3px; justify-content: end;" onclick="logout()">Logout</button>
+              <!-- <button class="btn btn-outline-primary navbar-tab-text " type="button" style="margin: 3px; justify-content: end;" onclick="logout()">Logout</button> -->
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#logout_modal">Logout</button>
+              
               <script>
                 function logout(){
                   window.location.href = "/";
@@ -307,7 +309,7 @@
 
           <div class="row">
             <div class="col" style="margin-top: 200px;  display: flex; justify-content: center;">
-              <img src="hacker-flag-hub/writable/uploads/home_learn_skill/pskill.png" />
+              <img src="<?= base_url('images/home_learn_skill/pskill.png'); ?>" />
             </div>
           </div>
 
@@ -368,6 +370,26 @@
           </div>
           <a href="#"></a>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="logout_modal" tabindex="-1" aria-labelledby="logout_title" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="logout_title">Logout</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Are you sure, do you want to logout?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+                        <button type="button" class="btn btn-primary"  onclick="logout()">yes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- === -->
         
         <!-- Dynamic BG  -->
 

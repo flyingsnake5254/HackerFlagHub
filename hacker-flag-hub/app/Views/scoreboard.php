@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,10 +16,9 @@
         <!-- Bootstrap CDN -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
+        
         <!-- echart  -->
-        <!-- Echart  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+        <script src="<?= base_url('js/echart.js'); ?>"></script>
     </head>
     <body class="bg-style">
         <div id="vanta_bg"></div>
@@ -28,7 +27,7 @@
             <div class="container-fluid">
 
               <!-- logo -->
-              <a class="navbar-brand" href="#"><img width='50px' height='50px' src="<?= base_url('images/logo.png'); ?>"><span id="logo-text" class="align-baseline">Hacker Flag Hub</span></a>
+              <a class="navbar-brand" href="#"><img alt="logo" width='50px' height='50px' src="<?= base_url('images/logo.png'); ?>"><span id="logo-text" class="align-baseline">Hacker Flag Hub</span></a>
 
               <!-- menu icon -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,25 +62,24 @@
                 </ul>
                 
               </div>
-              <button class="btn btn-outline-primary navbar-tab-text " type="button" style="margin: 3px; justify-content: end;" onclick="logout()">Logout</button>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#logout_modal">Logout</button>
               <script>
                 function logout(){
                   window.location.href = "/";
                 }
               </script>
+              
 
             </div>
         </nav>
 
         <div class="container">
             <div class="row">
-                <div class="column">
+                <div class="col"  style="display:flex; justify-content:center;">
                     <div id="score_history" style="width: 1000px; height:600px; margin-top: 100px; "></div>
                 </div>
             </div>
-            <div class="row">
-                
-            </div>
+            
         </div>
 
         <script>
@@ -225,12 +223,32 @@
 
         </script>
 
+        <!-- Modal -->
+        <div class="modal fade" id="logout_modal" tabindex="-1" aria-labelledby="logout_title" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="logout_title">Logout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    Are you sure, do you want to logout?
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+                    <button type="button" class="btn btn-primary"  onclick="logout()">yes</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- === -->
+
         
         
         <!-- Dynamic BG  -->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+        <script src="<?= base_url('js/three.js'); ?>"></script>
+        <script src="<?= base_url('js/vanta_dot.js'); ?>"></script>
         <script>
             VANTA.DOTS({
                 el: "#vanta_bg",
